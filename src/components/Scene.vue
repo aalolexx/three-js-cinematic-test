@@ -91,7 +91,7 @@ export default {
 
     // The Ground
     let textureLoader = new THREE.TextureLoader()
-    textureLoader.load('/textures/rocks.jpg', (texture) => {
+    textureLoader.load('./textures/rocks.jpg', (texture) => {
       texture.wrapS = THREE.RepeatWrapping
       texture.wrapT = THREE.RepeatWrapping
       texture.repeat.set( 20, 20 )
@@ -117,7 +117,7 @@ export default {
 
     // Loading the car object
     let gltfLoader = new GltfLoader()
-    gltfLoader.load('/blender-files/car/scene.gltf', (gltf) => {
+    gltfLoader.load('./blender-files/car/scene.gltf', (gltf) => {
       let model = gltf.scene.children[0]
       model.traverse((obj) => {
         if (obj.isMesh) {
